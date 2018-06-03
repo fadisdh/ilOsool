@@ -1,0 +1,123 @@
+<?php
+require __DIR__.'/../bootstrap/autoload.php';
+require_once __DIR__.'/../bootstrap/start.php';
+
+// Get Jobs
+$jobs = Job::where('fire_date', '<=', new DateTime('now'))
+			->where('done', '=', false)
+			->get();
+
+var_dump(count($jobs));
+
+if(isset($jobs)){
+	foreach ($jobs as $job) {
+
+		if($job->action == 'notification'){
+			
+			//Rule to redirect all notifications from Hussam Dissi To Bdaiwi
+			// if($job->user_id == 62){
+			// 	$jobUserID = 60;
+			// }else{
+			// 	$jobUserID = $job->user_id;
+			// }
+
+			$jobUserID = $job->user_id;
+
+			Notification::add($jobUserID, $job->type, $job->message, $job->url, $job->title, $job->title_arabic, $job->message_arabic);
+
+		}elseif($job->action == 'email'){
+
+			//Rule to redirect all notifications from Hussam Dissi To Bdaiwi
+			// if($job->user_id == 62){ 
+			// 	$user = User::find(60); //Bdaiwi User ID
+			// }else{
+			// 	$user = User::find($job->user_id);
+			// }
+
+			$user = User::find($job->user_id);
+
+			if($user->subscribed == 1){
+
+				$data = array('content' => $job->message,
+								'url' => $job->url);
+				Mail::queue('emails.notification', $data, function($message) use ($user, $job)
+				{
+					$message->from('info@ilosool.com');
+				    $message->to($user->email, $user->firstname . ' ' . $user->lastname)->subject(strip_tags($job->title));
+				});
+
+			}
+
+		}elseif($job->action == 'notification+email' || $job->action == 'email+notification'){
+			
+			//Rule to redirect all notifications from Hussam Dissi To Bdaiwi
+			// if($job->user_id == 62){ 
+			// 	$jobUserID = 60;
+			// 	$user = User::find(60); //Bdaiwi User ID
+			// }else{
+			// 	$jobUserID = $job->user_id;
+			// 	$user = User::find($job->user_id);	
+			// }
+
+			$jobUserID = $job->user_id;
+			$user = User::find($job->user_id);
+
+			Notification::add($jobUserID, $job->type, $job->message, $job->url, $job->title, $job->title_arabic, $job->message_arabic);
+		
+			if($user->subscribed == 1){
+				$data = array('content' => $job->message,
+								'url' => $job->url);
+				Mail::queue('emails.notification', $data, function($message) use ($user, $job)
+				{
+					$message->from('info@ilosool.com');
+				    $message->to($user->email, $user->firstname . ' ' . $user->lastname)->subject(strip_tags($job->title));
+				});
+			}
+
+		}elseif($job->action == 'message+email' || $job->action == 'email+message'){
+			//Notification::add($job->user_id, $job->type, $job->message, $job->url, $job->title);
+
+			//Rule to redirect all notifications from Hussam Dissi To Bdaiwi
+			// if($job->user_id == 62){ 
+			// 	$user = User::find(60); //Bdaiwi User ID
+			// }else{
+			// 	$user = User::find($job->user_id);	
+			// }
+
+			$user = User::find($job->user_id);
+
+			if($user->subscribed == 1){
+				$data = array('content' => $job->message,
+								'url' => $job->url);
+				Mail::queue('emails.notification', $data, function($message) use ($user, $job)
+				{
+					$message->from('info@ilosool.com');
+				    $message->to($user->email, $user->firstname . ' ' . $user->lastname)->subject(strip_tags($job->title));
+				});
+			}
+		}
+
+		//Notification to admins
+		// $adminUsers = User::where('rule_id', '=', 1)->get();
+
+		// foreach ($adminUsers as $user) {
+
+		// 	if($job->type == "new_user" || $job->type == "new_deal" || $job->type == "update_company"){
+		// 		Notification::add($user->id, $job->type, $job->message, $job->url, $job->title, $job->title_arabic, $job->message_arabic);
+
+		// 		$data = array('content' => $job->message,
+		// 					'url' => $job->url);
+		// 		Mail::queue('emails.notification', $data, function($message) use ($user, $job)
+		// 		{
+		// 			$message->from('info@ilosool.com');
+		// 		    $message->to($user->email, $user->firstname . ' ' . $user->lastname)->subject(strip_tags($job->title));
+		// 		});
+		// 	}else{
+		// 		Notification::add($user->id, $job->type, $job->message, $job->url, $job->title, $job->title_arabic, $job->message_arabic);
+		// 	}
+		// }
+
+		$job->done = true;
+		$job->save();
+	}
+}

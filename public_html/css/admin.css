@@ -1,0 +1,205 @@
+/* Main
+--------------------------------------------- */
+body{
+	background: url(../images/bg.png) repeat;
+	padding-top: 70px;
+}
+
+a{
+	color:#91C46C;
+
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #287D7D;
+}
+
+.animation{
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.empty{
+	text-align: center;
+}
+
+.logo{
+	margin-right:30px;
+}
+.admin-container .container{
+	min-height: 688px;
+}
+
+.admin-boxes{
+	margin-top: 50px;
+}
+	
+	.admin-box{
+		padding: 5px;
+	}
+
+		.admin-box a{
+			display: block;
+			box-shadow:0 0 5px #CCC;
+			background:#FFF;
+		}
+
+		.admin-box a:hover{
+			background:#F7F7F7;
+		}
+
+			.admin-box img{
+				display:block;
+				width:70%;
+				padding:15px;
+				margin:0 auto;
+			}
+
+			.admin-box h3{
+				margin:0;
+				color:#666;
+				text-align:center;
+				padding-bottom:20px;
+			}
+
+/* Bootstrap
+--------------------------------------------- */
+.caret-top{
+	display:inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 0 dotted;
+	border-right: 4px solid rgba(0, 0, 0, 0);
+	border-left: 4px solid rgba(0, 0, 0, 0);
+	border-bottom: 4px solid #000;
+	content: "";
+}
+
+.order-arrow{
+	color: #999;
+}
+
+.order-arrow:before {
+  content: "\e114";
+}
+
+	.order-arrow.asc, .order-arrow.desc{
+		color: #333;
+	}
+
+	.order-arrow.desc:before {
+	  content: "\e113";
+	}
+
+.breadcrumb>li+li.pull-right:before{
+	content: "";
+}
+
+
+/* Admin Navigator
+--------------------------------------------- */
+.navbar-header{
+	float: left;
+}
+
+.navbar-right{
+	float: right;
+}
+
+.navbar-form {
+	float: right;
+	margin: 0;
+	border: none;
+}
+
+	.navbar-form .form-group {
+		margin: 0;
+	}
+
+.navbar-nav {
+	margin: 0;
+}
+
+.navbar-nav.navbar-left{
+	float: left;
+}
+
+	.nav>li {
+		float: left;
+	}
+
+		.navbar-nav>li>a {
+			margin: 6px 0;
+		}
+
+/* Admin View
+--------------------------------------------- */
+.adminview-row{
+	padding: 10px 5px;
+	border-bottom: 1px solid #CCC;
+}
+
+.adminview-val{
+	font-weight: bold;
+}
+
+.unapproved{
+	color: rgb(128, 128, 128);
+}
+
+.adminview-image{
+	height: 100px;
+}
+
+.btn-block {
+	margin-top: 10px;
+}
+
+.trashed{
+	color: #b94a48; 
+}
+
+/* Admin footer
+--------------------------------------------- */
+.admin-footer{
+	background-color: #f8f8f8;
+	border-top:1px solid #e7e7e7;
+}
+
+	.admin-footer .container{
+		padding: 10px 15px;
+	}
+
+		.admin-footer .copy-rights{
+			margin-bottom: 0;
+		}
+
+		.admin-footer .right-btn{
+			padding: 0;
+			text-align: right;
+		}
+
+/* Select
+----------------------------------- */
+.input-group.input-group-select input.form-control{
+	width: 75% !important;
+}
+
+.input-group-select select.form-control{
+	width: 25% !important;
+}
+
+.toggle{
+	width: 90px;
+}

@@ -1,0 +1,383 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+body, h1, h2, h3, h4{
+	font-family: 'Droid Arabic Kufi', "Lucida Grande", arial, sans-serif;
+	direction: rtl;
+}
+
+.topmenu ul li {
+	float: right !important;
+}
+
+.topmenu .notifications-list{
+	float: left !important;
+}
+
+.profile .filter-sidemenu h3{
+	padding: 35px 20px 20px 0;
+}
+
+.company-item .company-info .left-info{
+	border-left: 1px solid #CCC;
+	border-right:none !important; 
+}
+
+.top-menu li.searchbox{
+	float: left !important;
+}
+
+.profile .mycompanies .company-item .col-md-5{
+	border-left: 1px solid #CCC;
+	border-right:none !important; 
+}
+
+.page-title:after{
+	margin: 5px 0 0 0;
+}
+
+.profile .addcompany-btn{
+	text-align: left !important;
+}
+
+.profile .sidemenu {
+
+margin-right: 10px !important;
+}
+
+.profile .sidemenu .profile-username .col-md-9{
+	padding: 10px 15px 5px 0px !important;
+
+}
+
+.profile .sidemenu .sidemenu-item{
+	border-right: 3px solid #C6DD73;
+	border-left: none !important;
+	direction: rtl;
+	text-align:right;
+}
+
+.profile .sidemenu .sidemenu-item:hover{
+	border-right: 10px solid #C6DD73;
+	border-left: none !important;
+}
+
+.profile .sidemenu .selected .sidemenu-item{
+	border-right: 10px solid #C6DD73;
+	border-left: none !important;
+}
+
+.profile .sidemenu .submenu{
+	border-right: 10px solid #C6DD73;
+	border-left: none !important;
+}
+
+.profile .bookmarks-filter .add-folder{
+	text-align: left !important;
+}
+
+.form-control{
+	line-height: 2.428571 !important;
+	font-size: 12px !important;
+}
+
+.mainmenu li a.mainmenu-link{
+	font-size: 24px !important;
+}
+
+.companies-list .company-item .actions a{
+	float: right !important;
+}
+
+.mycompanies .company-item-block .delete-listing{
+	right: auto !important;
+	left: 3px;
+}
+
+.checkbox input[type=checkbox]{
+	margin-right: 1px !important;
+}
+
+.checkbox label{
+	padding-right: 5px !important;
+}
+
+/* Comments
+--------------------------------------------*/
+
+.comment .comment-img{
+	float: right !important;
+}
+
+.comment .comment-text{
+	margin-right: 80px !important;
+	margin-left: 0;
+}
+
+.comment .comment-text:after, .comment .comment-text:before{
+	left: 100% ;
+	right: auto !important;
+}
+
+
+.comment .comment-text:after {
+	border-left-color: #EEE !important;
+	border-right: none !important;
+}
+
+.comment .comment-text:before {
+	border-left-color: #CCCCCC !important;
+	border-right: none !important;
+}
+
+.comment .comment-text .date{
+	right: auto !important;
+	left:10px;
+}
+
+/*Profile Top Menu
+--------------------------------------------*/
+
+.topmenu .notifications-list .notifications-wrapper.messages-wrapper{
+	right: auto !important;
+	left:-60px;
+}
+
+.topmenu .notifications-list .notifications-wrapper{
+	right: auto !important;
+	left:0;
+}
+
+.topmenu ul li ul.submenu li{
+	width: 100%;
+}
+
+.topmenu .notifications-list .notifications-wrapper li{
+	width: 100%;
+}
+
+/*Top Menu
+--------------------------------------------*/
+
+.topmenu{
+	z-index: 10 !important;
+}
+
+/*socialbar
+--------------------------------------------*/
+.socialbar{
+	right: auto !important;
+	left: 0px;
+	z-index: 9 !important;
+}
+
+.socialbar li a{
+	float: left !important; 
+}
+
+/*deals
+--------------------------------------------*/
+
+.deals.featured{
+	direction: ltr;
+}
+
+.login-popup .linkedin-login-btn{
+	background: #319a9a url(../images/linkedin-popup.png) 35px center no-repeat !important;
+}
+
+/*forms
+-----------------------------------------------*/
+.form-horizontal .control-label{
+	text-align: right !important;
+}
+
+.text-category{
+	padding: 15px 5px 5px 15px !important;
+}
+
+/*search
+-----------------------------------------------*/
+.searchbox .search{
+	text-align: right;
+	direction: rtl;
+}
+
+.searchbox .search-btn{
+	right: auto !important;
+	left: 10px;
+}
+
+/*filter sidemenu
+-----------------------------------------------*/
+.filter-sidemenu{
+	margin-right: 15px;
+}
+
+.login-box .login-box-content .login-btn{
+	direction: ltr !important;
+}
+
+/*user box
+------------------------------------------------*/
+
+.user-box-btns .first{
+	border-left: 1px solid #FFF;
+	border-right:none !important; 
+}
+
+/*timeline
+----------------------------------------------------------*/
+
+.list-unstyled{
+	direction: ltr;
+	text-align: right;
+}
+
+.stepper{
+	direction: ltr;
+}
+
+.stepper-rtl{
+	direction: rtl !important;
+}
+
+.col-md-7{
+	direction: rtl;
+}
+
+/*notifications
+----------------------------------------------------------------*/
+
+.notifications-wrapper p{
+	direction: rtl;
+	text-align: right;
+}
+
+.topmenu .notifications-wrapper .see-all a{
+	direction: rtl;
+}
+
+/*companies-list
+----------------------------------------------------------------*/
+.companies-list .company-item .actions a.first{
+	border-left: 1px solid #CCC;
+	border-right:none !important;
+}
+/*.submenu .submenu-item
+----------------------------------------------------------------*/
+.profile .sidemenu .submenu .submenu-item{
+	direction: rtl;
+}
+
+
+.pull-right{
+	float: left !important;
+}
+
+.col-md-10{
+	z-index: 9;
+}
+
+.col-md-1{
+	z-index: 9;
+}
+
+/*search form
+------------------------------------------*/
+
+/*.input-group{	
+	direction: ltr;
+}*/
+
+.profile .filter-sidemenu .form-control{
+	direction: rtl;
+}
+
+/*datepicker
+------------------------------------------*/
+.datepicker{
+	text-align: right;
+}
+
+.dropdown-menu{
+	width: 210px !important;
+}
+
+.datepicker.datepicker-dropdown.dropdown-menu{
+	right: 242.1875px;
+	left: auto !important;
+
+}
+/*rtl-class
+------------------------------------------*/
+.rtl-class{
+	border-left: 0;
+	border-right: 1px solid #ccc !important;
+	border-bottom-left-radius:0px !important; 
+ 	border-top-left-radius: 0px !important; 
+}
+
+/*popup-register
+------------------------------------------*/
+
+.popup-register-line .or{
+	margin-left: -13px;
+}
+
+.popup-register-linkedin a{
+	direction: rtl;
+}
+
+.popup-register-linkedin:hover{
+	direction: rtl;
+}
+
+.col-md-offset-3{
+	text-align: right;
+}
+
+
+/* popup-register 
+-------------------------------------------*/
+
+.popup-register-user{
+	display: block;
+	padding: 10px 29px 10px 40px !important;
+	color: #FFF;
+	background: #75901F url(../images/register-popup.png) 281px center no-repeat !important;
+
+	border-radius: 3px;
+}
+
+	.popup-register-user:hover{
+		background-color: #88a724;
+		color: #FFF;
+	}
+
+.popup-register-linkedin{
+	display: block;
+	padding: 10px 30px 10px 45px !important;
+	color: #FFF;
+	background: #1A85BC url(../images/linkedin-popup.png) 280px  center no-repeat !important;
+	border-radius: 3px;
+}
+
+	.popup-register-linkedin:hover{
+		background-color: #1e9ee0;
+		color: #FFF;
+	} 
+
+
+/* profile profile-filter 
+-------------------------------------------*/
+.profile .profile-filter{
+	text-align: left !important;
+}
+
+.profile .filter-sidemenu .search-investments{
+	direction: rtl;
+}
+
+.details-box h2{
+	margin-top: 5px !important;
+}

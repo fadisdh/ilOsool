@@ -1,0 +1,21 @@
+<div id="requestfiles-res">
+	{{ Form::open(array('route' => array('send.message.post',$id,$type),
+			'class' => 'form-horizontal ajax',
+			'data-res' => '#requestfiles-res')) }}
+	<div class="modal-body popup-request-body">
+		<div class="row">
+			<div class="col-md-12 {{ isset($error) ? 'has-error' : '' }}">
+				<h4 class="popup-request-title">{{trans('deal.message.send_new_message')}}</h4>
+				{{ Form::textarea('content', null, array('class' => 'form-control editor', 'rows' => '4')) }}
+				@if( isset($error) && $error == true )
+					<div class="help-block">{{trans('validation.custom.empty')}}</div>
+				@endif
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer popup-request-footer">
+		{{ Form::submit(trans('general.confirm'), array('class' => 'btn btn-primary ajax')) }}
+		<button type="button" class="btn btn-default" data-dismiss="modal">{{trans('general.cancel')}}</button>
+	</div>
+	{{ Form::close() }}
+</div>
